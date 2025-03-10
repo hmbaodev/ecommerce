@@ -1,10 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
 @import "tailwindcss";
 
 @theme {
-    /* Color */
-    --color-primary: #374151;
-    --color-white: #ffffff;
-    --color-white-100: #E5E7EB;
-    --color-black: #222222;
-    --color-gray: #6B7280;
+  /* Color */
+  --color-primary: #374151;
+  --color-white: #ffffff;
+  --color-white-100: #E5E7EB;
+  --color-black: #222222;
+  --color-gray: #6B7280;
+
+  --font-outfit: "Outfit", sans-serif;
+  --font-prata: "Prata", serif;
+}
+
+@layer base {
+  body {
+    @apply font-outfit overflow-x-hidden overflow-y-auto bg-white text-primary;
+  }
+
+  .app__container {
+    @apply px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw];
+  }
+
+  /*Typography*/
+  .major__heading {
+    @apply font-prata text-[30px] lg:text-[48px] text-primary;
+  }
+
+  .text-16-primary-medium {
+    @apply text-[16px] text-primary font-medium;
+  }
+
+  .text-16-gray-medium {
+    @apply text-[16px] text-gray font-medium;
+  }
+
+  .text-16-black-normal {
+    @apply text-[16px] text-black font-normal;
+  }
+
+  .text-14-primary-normal {
+    @apply text-[14px] text-primary font-normal;
+  }
+
+  .text-14-gray-normal {
+    @apply text-[14px] text-gray font-normal;
+  }
+
+  .text-14-black-normal {
+    @apply text-[14px] text-black font-normal;
+  }
+
+  /*  Layout */
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .product__carousel {
+    @apply gird-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+
+  /*  Spacing*/
+  .section-vertical__padding {
+    @apply py-3 md:py-5;
+  }
+
+  .logo {
+    @apply w-[144px] object-cover;
+  }
 }

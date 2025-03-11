@@ -9,6 +9,7 @@ import {
   Login,
   SignUp,
   Cart,
+  OrderHistory,
 } from "./routes";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/order-history" element={<OrderHistory />} />
       </Routes>
       {/* Footer */}
     </div>

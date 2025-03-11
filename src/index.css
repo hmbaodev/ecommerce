@@ -43,6 +43,10 @@
     @apply text-[16px] text-black font-normal;
   }
 
+  .text-14-gray-medium {
+    @apply text-[14px] text-gray font-medium;
+  }
+
   .text-14-primary-medium {
     @apply text-[14px] text-primary font-medium;
   }
@@ -78,10 +82,14 @@
   }
 
   .logo {
-    @apply w-[144px] object-cover;
+    @apply w-[144px] object-cover min-w-[144px];
   }
 
   .header__icon {
-    @apply w-5 cursor-pointer;
+    @apply w-5 cursor-pointer min-w-5;
+  }
+
+  .mobile__link {
+    @apply py-2 pl-6 border-b border-white-100 uppercase;
   }
 }

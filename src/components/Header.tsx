@@ -1,17 +1,20 @@
+import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router";
+import clsx from "clsx";
 
 import { links } from "../libs/links";
 
 const Header = () => {
-  const authenticated = true;
+  const [authenticated, setAuthenticated] = useState(true);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const navigate = useNavigate();
 
   return (
     <header className="border-white-100 flex items-center justify-between border-b py-5">
-      <div className="">
+      <Link to="/">
         <img src="/logo.png" alt="Forever" className="logo" />
-      </div>
-      <ul className="text-14-primary-medium flex items-center gap-5 uppercase">
+      </Link>
+      <ul className="text-14-primary-medium hidden items-center gap-5 uppercase sm:flex">
         {links.map((link) => (
           <li key={link.path}>
             <NavLink
@@ -30,7 +33,7 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center justify-end gap-5">
         <img src="/search_icon.png" alt="search" className="header__icon" />
         <div className="group relative">
           <img
@@ -48,9 +51,12 @@ const Header = () => {
           {authenticated && (
             <div className="absolute right-0 hidden pt-4 group-hover:block">
               <div className="bg-white-100 text-gray flex w-36 flex-col gap-2 rounded px-5 py-3">
-                <p className="text-16-gray-medium cursor-pointer hover:text-black">
+                <Link
+                  to="/order-history"
+                  className="text-16-gray-medium cursor-pointer hover:text-black"
+                >
                   Orders
-                </p>
+                </Link>
                 <p className="text-16-gray-medium cursor-pointer hover:text-black">
                   Logout
                 </p>
@@ -64,8 +70,46 @@ const Header = () => {
             0
           </span>
         </Link>
+        {/* Mobile menu icon */}
+        <img
+          src="/menu_icon.png"
+          alt="search"
+          className="header__icon block sm:hidden"
+          onClick={() => setOpenMobileMenu(true)}
+        />
       </div>
-      {/* <div className="w-0"></div> */}
+      {/* Mobile menu */}
+      <div
+        className={clsx(
+          "text-16-primary-medium absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all duration-300",
+          openMobileMenu ? "w-full" : "w-0",
+        )}
+      >
+        <div className="flex flex-col">
+          {/* Close menu button */}
+          <div
+            className="border-white-100 flex cursor-pointer items-center gap-4 border-b p-3"
+            onClick={() => setOpenMobileMenu(false)}
+          >
+            <img
+              src="dropdown_icon.png"
+              alt="close"
+              className="h-4 rotate-180"
+            />
+            <p>Back</p>
+          </div>
+          {links.map((link) => (
+            <Link
+              to={link.path}
+              key={link.path}
+              className="mobile__link"
+              onClick={() => setOpenMobileMenu(false)}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </div>
+      </div>
     </header>
   );
 };

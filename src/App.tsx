@@ -1,9 +1,30 @@
-import Header from "./components/Header.tsx";
+import { Route, Routes } from "react-router";
+
+import { Header } from "./components";
+import {
+  Home,
+  AboutUs,
+  Contact,
+  Collection,
+  Login,
+  SignUp,
+  Cart,
+} from "./routes";
 
 const App = () => {
   return (
     <div className="app__container">
       <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+      {/* Footer */}
     </div>
   );
 };

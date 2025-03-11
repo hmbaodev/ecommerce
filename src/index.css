@@ -22,6 +22,10 @@
     @apply px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw];
   }
 
+  .page__container {
+    @apply py-5 md:py-10;
+  }
+
   /*Typography*/
   .major__heading {
     @apply font-prata text-[30px] lg:text-[48px] text-primary;
@@ -37,6 +41,10 @@
 
   .text-16-black-normal {
     @apply text-[16px] text-black font-normal;
+  }
+
+  .text-14-primary-medium {
+    @apply text-[14px] text-primary font-medium;
   }
 
   .text-14-primary-normal {
@@ -61,7 +69,7 @@
   }
 
   .product__carousel {
-    @apply gird-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
   }
 
   /*  Spacing*/
@@ -71,5 +79,9 @@
 
   .logo {
     @apply w-[144px] object-cover;
+  }
+
+  .header__icon {
+    @apply w-5 cursor-pointer;
   }
 }

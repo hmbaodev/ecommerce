@@ -31,6 +31,18 @@
     @apply font-prata text-[30px] lg:text-[48px] text-primary;
   }
 
+  .sub__heading {
+    @apply font-outfit text-[30px] font-medium uppercase; 
+  }
+
+  .sub__heading-primary {
+    @apply text-primary;
+  }
+
+  .sub__heading-gray {
+    @apply text-gray;
+  }
+
   .text-16-primary-medium {
     @apply text-[16px] text-primary font-medium;
   }
@@ -41,6 +53,10 @@
 
   .text-16-black-normal {
     @apply text-[16px] text-black font-normal;
+  }
+
+  .text-16-gray-normal {
+    @apply text-[16px] text-gray font-normal;
   }
 
   .text-14-gray-medium {
@@ -73,12 +89,12 @@
   }
 
   .product__carousel {
-    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+    @apply grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-6;
   }
 
   /*  Spacing*/
   .section-vertical__padding {
-    @apply py-3 md:py-5;
+    @apply pt-6 md:pt-10;
   }
 
   .logo {
@@ -91,5 +107,22 @@
 
   .mobile__link {
     @apply py-2 pl-6 border-b border-white-100 uppercase;
+  }
+
+  .text__dash-container {
+    @apply flex items-center gap-2;
+  }
+
+  .text__dash-dash {
+    @apply bg-primary h-[2px] w-[50px];
+  }
+
+  /* components */
+  .outline__button {
+    @apply py-2 px-4 md:py-4 md:px-8 border border-primary text-primary font-medium cursor-pointer hover:bg-primary hover:text-white;
+  }
+
+  .filled__button {
+    @apply py-2 px-4 md:py-4 md:px-8 bg-primary text-white font-medium cursor-pointer hover:bg-primary/85;
   }
 }

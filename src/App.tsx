@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 import {
   Home,
   AboutUs,
@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/order-history" element={<OrderHistory />} />
       </Routes>
-      {/* Footer */}
+      <Footer />
     </div>
   );
 };

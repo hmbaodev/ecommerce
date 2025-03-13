@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router";
 import clsx from "clsx";
 
-import { links } from "../libs/links";
+import { links } from "../constants/links";
 
 const Header = () => {
   const [authenticated, setAuthenticated] = useState(true);
@@ -57,7 +57,10 @@ const Header = () => {
                 >
                   Orders
                 </Link>
-                <p className="text-16-gray-medium cursor-pointer hover:text-black">
+                <p
+                  className="text-16-gray-medium cursor-pointer hover:text-black"
+                  onClick={() => setAuthenticated(false)}
+                >
                   Logout
                 </p>
               </div>

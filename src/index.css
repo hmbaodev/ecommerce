@@ -32,7 +32,7 @@
   }
 
   .sub__heading {
-    @apply font-outfit text-[30px] font-medium uppercase; 
+    @apply font-outfit text-[24px] font-medium uppercase; 
   }
 
   .sub__heading-primary {
@@ -88,8 +88,12 @@
     @apply flex items-center justify-center;
   }
 
-  .product__carousel {
-    @apply grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-6;
+  .product__carousel-home {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6;
+  }
+
+  .product__carousel-collection {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6;
   }
 
   /*  Spacing*/

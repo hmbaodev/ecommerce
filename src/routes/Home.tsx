@@ -1,4 +1,4 @@
-import { Hero, Newsletter, ProductCard } from "../components";
+import { Hero, Newsletter, ProductCarousel } from "../components";
 import { products } from "../constants/products";
 import { guarantees } from "../constants/guarantees";
 
@@ -24,11 +24,10 @@ const Home = () => {
           </p>
         </div>
         {/* product carousel */}
-        <div className="product__carousel">
-          {products.map((product) => (
-            <ProductCard product={product} key={product.id} />
-          ))}
-        </div>
+        <ProductCarousel
+          className="product__carousel-home"
+          products={products}
+        />
       </section>
       {/**** Best Seller ****/}
       <section className="my-10">
@@ -49,11 +48,10 @@ const Home = () => {
           </p>
         </div>
         {/* product carousel */}
-        <div className="product__carousel">
-          {products.map((product) => (
-            <ProductCard product={product} key={product.id} />
-          ))}
-        </div>
+        <ProductCarousel
+          className="product__carousel-home"
+          products={products}
+        />
       </section>
       {/* Guarantee */}
       <section className="my-10 flex flex-col items-center gap-6 md:flex-row md:justify-between">

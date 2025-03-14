@@ -6,6 +6,7 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import Cart from "./Cart";
 import OrderHistory from "./OrderHistory";
+import ProductDetail from "./ProductDetail";
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   SignUp,
   Cart,
   OrderHistory,
+  ProductDetail
 };

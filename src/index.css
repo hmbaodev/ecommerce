@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
 @import "tailwindcss";
 
 @theme {
   /* Color */
   --color-primary: #374151;
   --color-white: #ffffff;
-  --color-white-100: #E5E7EB;
+  --color-white-100: #e5e7eb;
   --color-black: #222222;
-  --color-gray: #6B7280;
+  --color-gray: #6b7280;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-orange: #FF532E;
 
   --font-outfit: "Outfit", sans-serif;
   --font-prata: "Prata", serif;
@@ -15,7 +18,7 @@
 
 @layer base {
   body {
-    @apply font-outfit overflow-x-hidden overflow-y-auto bg-white text-primary;
+    @apply font-outfit text-primary overflow-x-hidden overflow-y-auto bg-white;
   }
 
   .app__container {
@@ -28,11 +31,11 @@
 
   /*Typography*/
   .major__heading {
-    @apply font-prata text-[30px] lg:text-[48px] text-primary;
+    @apply font-prata text-primary text-[30px] lg:text-[48px];
   }
 
   .sub__heading {
-    @apply font-outfit text-[24px] font-medium uppercase; 
+    @apply font-outfit text-[24px] font-medium uppercase;
   }
 
   .sub__heading-primary {
@@ -44,39 +47,39 @@
   }
 
   .text-16-primary-medium {
-    @apply text-[16px] text-primary font-medium;
+    @apply text-primary text-[16px] font-medium;
   }
 
   .text-16-gray-medium {
-    @apply text-[16px] text-gray font-medium;
+    @apply text-gray text-[16px] font-medium;
   }
 
   .text-16-black-normal {
-    @apply text-[16px] text-black font-normal;
+    @apply text-[16px] font-normal text-black;
   }
 
   .text-16-gray-normal {
-    @apply text-[16px] text-gray font-normal;
+    @apply text-gray text-[16px] font-normal;
   }
 
   .text-14-gray-medium {
-    @apply text-[14px] text-gray font-medium;
+    @apply text-gray text-[14px] font-medium;
   }
 
   .text-14-primary-medium {
-    @apply text-[14px] text-primary font-medium;
+    @apply text-primary text-[14px] font-medium;
   }
 
   .text-14-primary-normal {
-    @apply text-[14px] text-primary font-normal;
+    @apply text-primary text-[14px] font-normal;
   }
 
   .text-14-gray-normal {
-    @apply text-[14px] text-gray font-normal;
+    @apply text-gray text-[14px] font-normal;
   }
 
   .text-14-black-normal {
-    @apply text-[14px] text-black font-normal;
+    @apply text-[14px] font-normal text-black;
   }
 
   /*  Layout */
@@ -89,11 +92,11 @@
   }
 
   .product__carousel-home {
-    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6;
+    @apply grid grid-cols-2 gap-4 gap-y-6 md:grid-cols-3 lg:grid-cols-4;
   }
 
   .product__carousel-collection {
-    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6;
+    @apply grid grid-cols-2 gap-4 gap-y-6 md:grid-cols-3 lg:grid-cols-4;
   }
 
   /*  Spacing*/
@@ -102,15 +105,15 @@
   }
 
   .logo {
-    @apply w-[144px] object-cover min-w-[144px];
+    @apply w-[144px] min-w-[144px] object-cover;
   }
 
   .header__icon {
-    @apply w-5 cursor-pointer min-w-5;
+    @apply w-5 min-w-5 cursor-pointer;
   }
 
   .mobile__link {
-    @apply py-2 pl-6 border-b border-white-100 uppercase;
+    @apply border-white-100 border-b py-2 pl-6 uppercase;
   }
 
   .text__dash-container {
@@ -123,10 +126,22 @@
 
   /* components */
   .outline__button {
-    @apply py-2 px-4 md:py-4 md:px-8 border border-primary text-primary font-medium cursor-pointer hover:bg-primary hover:text-white;
+    @apply border-primary text-primary hover:bg-primary cursor-pointer border px-4 py-2 font-medium hover:text-white md:px-8 md:py-4 uppercase;
   }
 
   .filled__button {
-    @apply py-2 px-4 md:py-4 md:px-8 bg-primary text-white font-medium cursor-pointer hover:bg-primary/85;
+    @apply bg-primary hover:bg-primary/85 cursor-pointer px-4 py-2 font-medium text-white md:px-8 md:py-4 uppercase;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
   }
 }

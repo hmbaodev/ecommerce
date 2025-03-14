@@ -10,6 +10,7 @@ import {
   SignUp,
   Cart,
   OrderHistory,
+  ProductDetail,
 } from "./routes";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />

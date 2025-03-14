@@ -3,7 +3,7 @@ import { links, socialLinks } from "../constants/links";
 
 const Footer = () => {
   return (
-    <footer className="border-white-100 mt-10 border-t py-10">
+    <footer className="border-white-100 mt-16 border-t py-10">
       <div className="text-14-primary-normal flex grid-cols-[3fr_1fr_1fr] flex-col gap-6 sm:grid sm:gap-14">
         <div>
           <img src="/logo.png" alt="logo" className="logo mb-5" />

@@ -7,10 +7,11 @@ import { products } from "../constants/products";
 import { ProductCarousel } from "../components";
 
 const ProductDetail = () => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [mainImage, setMainImage] = useState<string>(imageSources[0]);
   const [selectedSize, setSelectedSize] = useState<string>("");
   const [selectedTab, setSelectedTab] = useState<"description" | "review">("description");
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  
   const NUM_OF_RELATED_PRODUCTS = 4;
 
   const scroll = (direction: string) => {

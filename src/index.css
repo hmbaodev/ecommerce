@@ -132,6 +132,10 @@
   .filled__button {
     @apply bg-primary hover:bg-primary/85 cursor-pointer px-4 py-2 font-medium text-white md:px-8 md:py-4 uppercase;
   }
+
+  .input-field {
+    @apply border border-white-100 rounded-md px-3 py-2 text-[16px];
+  }
 }
 
 @layer utilities {

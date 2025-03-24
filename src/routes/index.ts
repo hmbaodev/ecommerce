@@ -5,8 +5,8 @@ import Collection from "./Collection";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import Cart from "./Cart";
-import OrderHistory from "./OrderHistory";
 import ProductDetail from "./ProductDetail";
+import Checkout from "./Checkout";
 
 export {
   Home,
@@ -16,6 +16,6 @@ export {
   Login,
   SignUp,
   Cart,
-  OrderHistory,
-  ProductDetail
+  ProductDetail,
+  Checkout
 };

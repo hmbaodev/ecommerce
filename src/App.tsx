@@ -9,8 +9,8 @@ import {
   Login,
   SignUp,
   Cart,
-  OrderHistory,
   ProductDetail,
+  Checkout,
 } from "./routes";
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/order-history" element={<OrderHistory />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </div>
